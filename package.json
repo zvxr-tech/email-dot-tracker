@@ -1,0 +1,13 @@
+{
+  "title": "Email.Tracker",
+  "name": "email-dot-tracker-addon",
+  "version": "0.0.1",
+  "description": "This uses dots in the local-part of an email address to encode a number into the email address provided to a given website. This allows for us to track how the website uses that email address, since each website will use a different email encoded with a unique number.",
+  "main": "index.js",
+  "author": "Zvxr Pynex",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "license": "GNU V.2"
+}

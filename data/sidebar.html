@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script type="text/javascript" src="sidebar.js"></script>
+		<link rel="stylesheet" href="sidebar.css">
+	</head>
+	<body>
+	<div>
+		<h2>Email.Tracker</h2>
+		<hr />
+		<div class="">
+			<h3>Master</h3>
+			<input title="The local part of the email address to derive encoded email adresses from (E.g. Josh)." type="text" name="master-local-text" id="master-local-text" value="" />
+			<span>@</span>
+			<input title="The host part of the email address to derive encoded email adresses from (E.g. gmail.com) ." type="text" name="master-host-text" id="master-host-text" value="" />
+			<button title="Set the email address composed of the two components above (local + host)." name="update-master-button" id="update-master-button" >Update</button>
+		</div>
+		<hr />
+		<div class="">
+			<h3>Reserved</h3>
+			<div class="scrollable">
+				<select title="This lists all of the email local parts that will not be considered when generating an encoded email address. (E.g. Jo.sh, Jo..sh)" size="12" name="reserved-email-list" id="reserved-email-list"></select>
+			</div>
+			<input title="To add an local-part of an email address to the reserved list, enter it here." type="text" name="local-reserved-text" id="local-reserved-text" value="" />
+			<span>@</span>
+			<input title="The reserved email local-part list is independant of the host part of the email address." type="text" name="host-reserved-text"  id="host-reserved-text" disabled="true" value="" />
+			<button title="Add the email entered above to the reserved list." name="add-reserved-button" id="add-reserved-button">Add</button>
+			<button title="Remove the email highlighted in the listbox from the reserved list." name="remove-reserved-button" id="remove-reserved-button" disabled="true" >Remove</button>
+		</div>
+		<hr />
+		<div class="">
+			<h3>Query</h3>
+			<input title="Lookup by website name or encoded email address." type="input" name="query-text" id="query-text" value="" />
+			<label>Email</label><input title="Searching by email will return all of the FQDN of the websites that the encoded email has been associated with. The email must match exactly." type="radio" checked="true" name="query-radio" id="query-radio-email" value="email" />
+			<label>Host</label><input title="Seaching by hostanme will return all of the encoded email adresses associated with any website FDQN that contains the query string." type="radio" name="query-radio" id="query-radio-host" value="host" />
+			<button title="Query the database." name="query-button" id="query-button" >Query</button>
+			<div class="scrollable">
+				<select title="This contains the results of the query. Each record returned will contain the following, in order: the date of association, the FQDN of a website, and the encoded email address associated with that website. " size="12" name="query-response-list" id="query-response-list" ></select>
+			</div>
+		</div>
+		<hr />
+		<div class="">
+			<h3>Addon Reset</h3>
+			<button title="This will remove all website-email address associations, remove reserved email list entries, and reset the encoding counter. THIS IS IRREVERSABLE!" name="reset-master-button" id="reset-master-button">Reset</button>
+		</div>
+	</div>
+	</body>
+</html>
